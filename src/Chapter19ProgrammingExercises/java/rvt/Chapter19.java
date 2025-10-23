@@ -35,6 +35,7 @@ public class Chapter19 {
                 break;
             case 7:
                 System.out.println("TASK 7: ");
+                Task7_OneLetterperLine(scanner);
                 break;
             default:
                 System.out.println("Excercise not found");
@@ -147,14 +148,16 @@ public class Chapter19 {
 
     public static void Task7_OneLetterperLine(Scanner scanner) {
         System.out.println("Enter a word: ");
+        scanner.nextLine();
         String word = scanner.nextLine();
         int loopCount = word.length();
         int i = 0;
 
         while (i < loopCount)
         {
-            
+            char characterToOutput = word.charAt(i);
+            System.out.println(characterToOutput);
+            i++;
         }
-
     }
 }
