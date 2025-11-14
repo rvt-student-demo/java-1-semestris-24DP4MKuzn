@@ -98,12 +98,12 @@ public class Chapter60 {
     System.out.println( "Original Array: " 
         + val[0] + " " + val[1] + " " + val[2] + " " + val[3] );
  
-    for (int i = 0; i < val.length; i++) {
+    for (int i = 0; i < val.length - 1; i++) {
         temp = val[i];
-        val[i] = val [i + 1];
-        val[i + 1] = val[i];
+        val[i] = val[i + 1];
+        val[i + 1] = temp;
     }
- 
+
     System.out.println( "Reversed Array: " 
         + val[0] + " " + val[1] + " " + val[2] + " " + val[3] );
     }
