@@ -114,22 +114,27 @@ public class JMArrayList {
     }
 
     public static void Task4_RemoveLast(Scanner scanner) {
-        int[] valA = { 13, -22, 82, 17 };
-        int[] valB = { 0, 0, 0, 0 };
+        ArrayList<String> strings = new ArrayList<>();
 
-        valB[0] = 12;
-        valB[1] = 47;
-        valB[2] = -57;
-        valB[3] = 8;
+        strings.add("First");
+        strings.add("Second");
+        strings.add("Third");
 
-        System.out.println("valA: "
-                + valA[0] + " " + valA[1] + " " + valA[2] + " " + valA[3]);
+        System.out.println(strings);
 
-        System.out.println("valB: "
-                + valB[0] + " " + valB[1] + " " + valB[2] + " " + valB[3]);
+        RemoveLast(strings);
+        RemoveLast(strings);
 
-        System.out.println("sum:  "
-                + (valA[0] + valB[0]) + " " + (valA[1] + valB[1]) + " "
-                + (valA[2] + valB[2]) + " " + (valA[3] + valB[3]));
+        System.out.println(strings);
+    }
+
+    public static void RemoveLast(ArrayList<String> strings)
+    {
+        for (int i = 0; i < strings.size(); i++){
+            if (i == strings.size() - 1)
+            {
+                strings.remove(i);
+            }
+        }
     }
 }
