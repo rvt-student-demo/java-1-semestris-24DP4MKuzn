@@ -37,16 +37,12 @@ public class JMArrayList {
         boolean stop = false;
         ArrayList<Integer> numbers = new ArrayList<>();
 
-        while (stop == false) 
-        {
+        while (stop == false) {
             System.out.println("Enter a number (-1 to stop)");
             int input = scanner.nextInt();
-            if (input == -1) 
-            {
+            if (input == -1) {
                 stop = true;
-            } 
-            else 
-            {
+            } else {
                 numbers.add(input);
             }
         }
@@ -60,27 +56,22 @@ public class JMArrayList {
         int end = scanner.nextInt();
 
         System.out.println("Values in indice range: " + start + ", " + end);
-        for (int i = start; i <= end; i++) 
-        {
+        for (int i = start; i <= end; i++) {
             System.out.println(numbers.get(i));
-        }   
+        }
     }
 
     public static void Task2_ListSize(Scanner scanner) {
         ArrayList<String> names = new ArrayList<>();
         boolean stop = false;
         scanner.nextLine();
-        
-        while (stop == false) 
-        {
+
+        while (stop == false) {
             System.out.println("Enter name (enter 'stop' to stop)");
             String input = scanner.nextLine();
-            if (input.equals("stop")) 
-            {
+            if (input.equals("stop")) {
                 stop = true;
-            } 
-            else 
-            {
+            } else {
                 names.add(input);
             }
         }
@@ -89,35 +80,56 @@ public class JMArrayList {
     }
 
     public static void Task3_OnTheList(Scanner scanner) {
-    int[] valA   = { 13, -22,  82,  17}; 
-    int[] valB   = {-12,  24, -79, -13};
-    int[] sum    = {  0,   0,   0,   0};
-    
-    for (int i = 0; i < sum.length; i++) {
-            sum[i] = valA[i] + valB[i];
+        ArrayList<String> names = new ArrayList<>();
+        boolean stop = false;
+        scanner.nextLine();
+
+        while (stop == false) {
+            System.out.println("Enter name (enter nothing to stop)");
+            String input = scanner.nextLine();
+            if (input.equals("")) {
+                stop = true;
+            } else {
+                names.add(input);
+            }
         }
- 
-    System.out.println( "sum: " 
-        + sum[0] + " " + sum[1] + " " + sum[2] + " " + sum[3] );
+
+        System.out.println("Search for?: ");
+        String searchTerm = scanner.nextLine();
+        boolean nameFound = false;
+
+        for (int i = 0; i < names.size(); i++) {
+            String nameInIteration = names.get(i);
+            if (nameInIteration.equals(searchTerm)) {
+                System.out.println(searchTerm + " was found!");
+                nameFound = true;
+                break;
+            }
+        }
+
+        if (nameFound == false)
+        {
+            System.out.println(searchTerm + " was not found!");
+        }
     }
 
     public static void Task4_RemoveLast(Scanner scanner) {
-    int[] valA   = { 13, -22,  82,  17}; 
-    int[] valB   = {  0,   0,   0,   0};
- 
-    valB[0] = 12;
-    valB[1] = 47;
-    valB[2] = -57;
-    valB[3] = 8;
+        int[] valA = { 13, -22, 82, 17 };
+        int[] valB = { 0, 0, 0, 0 };
 
-    System.out.println( "valA: " 
-        + valA[0] + " " + valA[1] + " " + valA[2] + " " + valA[3] );
- 
-    System.out.println( "valB: " 
-        + valB[0] + " " + valB[1] + " " + valB[2] + " " + valB[3] );
+        valB[0] = 12;
+        valB[1] = 47;
+        valB[2] = -57;
+        valB[3] = 8;
 
-    System.out.println( "sum:  " 
-        + (valA[0]+valB[0]) + " " + (valA[1]+valB[1]) + " " 
-        + (valA[2]+valB[2]) + " " + (valA[3]+valB[3]) );
+        System.out.println("valA: "
+                + valA[0] + " " + valA[1] + " " + valA[2] + " " + valA[3]);
+
+        System.out.println("valB: "
+                + valB[0] + " " + valB[1] + " " + valB[2] + " " + valB[3]);
+
+        System.out.println("sum:  "
+                + (valA[0] + valB[0]) + " " + (valA[1] + valB[1]) + " "
+                + (valA[2] + valB[2]) + " " + (valA[3] + valB[3]));
     }
 }
