@@ -34,7 +34,7 @@ public class DelicacyStore {
 
         totalCost = itemPrice + shippingCost;
 
-        System.out.println("\nRekins:");
+        System.out.println("Rekins:");
         
         System.out.println(itemName + " - " + itemPrice);
 

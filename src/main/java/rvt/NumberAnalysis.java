@@ -37,8 +37,6 @@ public class NumberAnalysis {
             }
         }
 
-        scanner.close();
-
         if (count > 0) {
             double average = (double) sum / count;
 
